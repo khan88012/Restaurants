@@ -18,10 +18,17 @@ public class WeatherForecastController : ControllerBase
         _weatherForcastService = weatherForcast;
     }
 
-    [HttpGet]
-    [Route("Example")]
-    public IEnumerable<WeatherForecast> Get()
+ 
+
+    [HttpPost] //[HttpPost("generate")]
+    [Route("generate")]
+    public IActionResult Generate([FromQuery] int count , [FromBody] TemperatureRequest request)
     {
-        return _weatherForcastService.Get();
+        if(count < 0 || request.Max < request.Min )
+        {
+            return BadRequest("Count has to be positive number, and max must be greater than the min value.");
+        }
+        var result = _weatherForcastService.Get(count, request.Min, request.Max);
+            return Ok(result);
     }
 }
