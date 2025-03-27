@@ -9,10 +9,10 @@ public class WeatherForecastController : ControllerBase
    
 
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly WeatherForcastService _weatherForcastService;
+    private readonly IWeatherForcastService _weatherForcastService;
 
     public WeatherForecastController(ILogger<WeatherForecastController> logger , 
-        WeatherForcastService weatherForcast)
+        IWeatherForcastService weatherForcast)
     {
         _logger = logger;
         _weatherForcastService = weatherForcast;
