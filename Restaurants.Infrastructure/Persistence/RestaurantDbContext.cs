@@ -4,16 +4,13 @@ using Restaurants.Domain.Entities;
 
 namespace Restaurants.Infrastructure.Persistence
 {
-    internal class RestaurantDbContext : DbContext
+    internal class RestaurantDbContext(DbContextOptions<RestaurantDbContext> options) : DbContext(options)
     {
         internal DbSet<Restaurant> Restaurants { get; set; }    
 
         internal DbSet<Dish> dishes { get; set; }   
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=NEUDESICB1KJQL3\\SQLEXPRESS;Database=RestaurantDb;Trusted_Connection=True;TrustServerCertificate=True;"); //added TrustServerCertificate to Bypasses SSL/TLS certificate validation when encrypting the connection. Useful when SQL Server is using a self-signed or untrusted certificate.
-        }
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
