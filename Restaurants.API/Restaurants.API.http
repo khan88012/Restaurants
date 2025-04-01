@@ -1,17 +1,5 @@
 @Restaurants.API_HostAddress = http://localhost:5109
 
-GET {{Restaurants.API_HostAddress}}/api/weatherforecast/example
-Accept: application/json
-
-###
-
-@count=5
-POST {{Restaurants.API_HostAddress}}/api/weatherforecast/generate?count={{count}}
-Content-Type: application/json
-
-{
-  "Min" : -23,
-  "Max" : 25
-}
+GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###

@@ -1,4 +1,4 @@
-using Restaurants.API.Controllers;
+using Restaurants.Application.Extensions;
 using Restaurants.Infrastructure.Extensions;
 using Restaurants.Infrastructure.Seeders;
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IWeatherForcastService,WeatherForcastService>();
+builder.Services.AddApplication();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
