@@ -9,6 +9,13 @@ namespace Restaurants.Infrastructure.Repositories;
 
 internal class RestaurantsRepository(RestaurantDbContext dbContext) : IRestaurantRepository
 {
+    public async Task<int> Create(Restaurant entity)
+    {
+        dbContext.Restaurants.Add(entity);
+        await dbContext.SaveChangesAsync();
+        return entity.Id;
+    }
+
     public async Task<IEnumerable<Restaurant>> GetAllAsync()
     {
         var restaurants = await dbContext.Restaurants.Include(restaurant => restaurant.Dishes).ToListAsync();

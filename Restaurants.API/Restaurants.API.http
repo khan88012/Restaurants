@@ -7,3 +7,20 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 GET {{Restaurants.API_HostAddress}}/api/restaurants/3
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+    "Name": "Sushi World",
+    "Description": "Authentic Japanese sushi with fresh ingredients.",
+    "Category": "Japanese",
+    "HasDelivery": true,
+    "ContactEmail": "contact@sushiworld.com",
+    "ContactNumber": "333-222-1111",
+    "City": "San Francisco",
+    "Street": "Market Street",
+    "PostalCode": "94103"
+}
+
+###
