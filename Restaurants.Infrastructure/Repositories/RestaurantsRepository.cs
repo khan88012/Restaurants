@@ -11,13 +11,15 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext) : IRestauran
 {
     public async Task<IEnumerable<Restaurant>> GetAllAsync()
     {
-        var restaurants = await dbContext.Restaurants.ToListAsync();
+        var restaurants = await dbContext.Restaurants.Include(restaurant => restaurant.Dishes).ToListAsync();
         return restaurants;
     }
 
     public async Task<Restaurant?> GetByIdAsync(int id)
     {
-        var restaurant = await dbContext.Restaurants.FirstOrDefaultAsync(x => x.Id == id);    
+        var restaurant = await dbContext.Restaurants
+            .Include(restaurant => restaurant.Dishes)
+            .FirstOrDefaultAsync(x => x.Id == id);    
         return restaurant;
     }
 }
