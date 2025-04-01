@@ -17,10 +17,10 @@ Content-Type: application/json
     "Category": "Japanese",
     "HasDelivery": true,
     "ContactEmail": "contact@sushiworld.com",
-    "ContactNumber": "333-222-1111",
+    "ContactNumber": "9949677777",
     "City": "San Francisco",
     "Street": "Market Street",
-    "PostalCode": "94103"
+    "PostalCode": "94-103"
 }
 
 ###
