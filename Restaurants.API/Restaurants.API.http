@@ -12,11 +12,11 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-    "Name": "Sushi World",
-    "Description": "Authentic Japanese sushi with fresh ingredients.",
-    "Category": "Japanese",
+    "Name": "Goli Badapav",
+    "Description": "Authentic Mumbai dish with fresh ingredients.",
+    "Category": "Indian",
     "HasDelivery": true,
-    "ContactEmail": "contact@sushiworld.com",
+    "ContactEmail": "contact@mumbaiGoli.com",
     "ContactNumber": "9949677777",
     "City": "San Francisco",
     "Street": "Market Street",
