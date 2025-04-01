@@ -12,7 +12,7 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-    "Name": "Goli Badapav",
+    "Name": "Goli Badapav1",
     "Description": "Authentic Mumbai dish with fresh ingredients.",
     "Category": "Indian",
     "HasDelivery": true,

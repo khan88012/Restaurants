@@ -1,8 +1,10 @@
 ﻿
 
-namespace Restaurants.Application.Restaurants.Dtos;
+using MediatR;
 
-public class CreateRestaurantDto
+namespace Restaurants.Application.Restaurants.Commands.CreateRestaurant;
+
+public class CreateRestaurentCommand : IRequest<int> //CreateRestaurentCommand is kind of a request that takes below properties to create a restaurant and returns id of type int "IRequest<int> "
 {
     public string Name { get; set; } = default!;
 
