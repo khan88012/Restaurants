@@ -29,3 +29,14 @@ Content-Type: application/json
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
+@id = 3
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Content-Type: application/json
+
+{
+ "Name": "Lutf cafe",
+    "Description": "Authentic Lucknow dish with fresh ingredients.",
+    "HasDelivery": false
+}
+
+###
