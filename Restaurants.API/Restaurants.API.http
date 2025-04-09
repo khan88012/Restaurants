@@ -1,6 +1,7 @@
 @Restaurants.API_HostAddress = https://localhost:7044
 
-@token = CfDJ8E5rXAed1p5GlMjv8Z3RzWVEhquwTtyhX0fDHUio30XTYobkN8iX60SLsNHBgMwXBAxxitKvoEEr0EyXZ_0J2eZeGN-ag-TfAgNy7yETmmJ1wVWkFjKyaElVHEmyuXcCf-bolQ1_MeLlseE254MntfaT2FIpLn7b01voVkihldLxm1JSwrHrhlHOd9SIxFad_UfbySmCX3HhL9EmJUe4yep0Osz85_MZ22x334H3Kv7o8nv1T_a5Ui7UEoqFaz-UxIUvNQL9xfw6o81xsSrdu3skumVbvsSKDxRcbUdzs7ht1-Nx7KaiDkorIVZk6LHRTFEZI5ta77T7AMGTL1056PYUsfqiZ_19GAc1AMuZ6WlMzmAlaSAYcideIa9ajYLpPVoHxi7ghv3B690ZLvM72eEeQJkEpt0UA140uBuut97Ep19ctFy3PYTI150RvTD1zf7II2FTuqhiK2t7v085H9ireroyhN04M-KmAcy-_u__AOvqV3DQbTOqpcX_VU169moxzlVIpIsrhAVvdPOpwAkUdsiW4WWaUMuHcCDLE6WBJpwT8itoH5jDI0Ny8oMfzt03ZbTEdE570w6lrm_3kTIfNYguBocx_lFWVcfjwBj8vVgOyQe21YZgy-DwdyLdcxFrwZmHWqjqW4vAkSraKFQmh87VgUEfyxZKVfy2LpS08KwgCXT20XpmS4A1vwS76A
+@token = CfDJ8E5rXAed1p5GlMjv8Z3RzWWwVNBE9nRW3650Skf1bQ_8b-a_G2LY52m7rEGpH0AJ6xcx94kQ4P2tlHXSTerlUZvBmMbdZBvDIqvhLmOLoltKYvM2nTmwGQPcgL8LY6suYKF2cp4syhLZVOL-GUKCanB24YU2DcodNowzNTQo8DrgYfAb7TvY7nN4Um2QGJkuY2Z7DlHnPVbrsNYnuOqFshHOv-KvNVMJxu-I_wiRsxxB-6Jlodf9EPNYGwldwQ_LDGylMX_icSlQF1rjWl7xbZWgjmP-m-Nu-mb36KNIgqDAnu_bmbI107I3ueW2VcWnIOunw6pjR8Z60IwW3Ca_P-zYX-z4_MZvPMxeDdYI9JcZCH_9HI-wma3Xs-q7zvtoUZA2yXox0rP0KHWNYPtIx5C4aVR1Ehi4E25Q_2jg4J3nTfsKoYsc8z4upi12Cf31LQnvydKZG_D5UjxBepxEzA-Ky4Qmgl1MUUlJtYH5BC-fO2FpYqV3G_KhV1hmP3RfnWIHT0F3PPoX5uKppyXQWwsmsPOuG5gVRiXhLqSwjFzNp55GyzBVL6YjrR0irRYb0HVJ1IqmV6T-sAqXmNmdy9GDDrJG38sbb_ob_0XRoU5qDfkOnZBK2AyucLjEG5WDAu9OFbCRoDTYNhJhxcDqLh-vXznTaHqK3zns0m72Mk6L9SD5VR9Bnzf0fei_2k6W5g
+
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
@@ -11,10 +12,11 @@ Authorization : Bearer {{token}}
 ###
 
 POST {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization : Bearer {{token}}
 Content-Type: application/json
 
 {
-    "Name": "Goli Badapav1",
+    "Name": "Goli Badapav11",
     "Description": "Authentic Mumbai dish with fresh ingredients.",
     "Category": "Indian",
     "HasDelivery": true,
@@ -42,16 +44,16 @@ Content-Type: application/json
 }
 
 ###
-POST {{Restaurants.API_HostAddress}}/register
+POST {{Restaurants.API_HostAddress}}/api/identity/register
 Content-Type: application/json
 {
-    "email":"testuser@test.com",
+    "email":"user@test.com",
     "password":"Testpassword1!"
 }
 ###
 POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 {
-    "email":"testuser@test.com",
+    "email":"Admin@test.com",
     "password":"Testpassword1!"
 }

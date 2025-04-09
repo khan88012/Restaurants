@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,7 @@ namespace Restaurants.Infrastructure.Extensions
             services.AddDbContext<RestaurantDbContext>(options => options.UseSqlServer(connectionString));  //this lambda function should look like the configuration method we removed from dbcontext class
 
             services.AddIdentityApiEndpoints<User>()
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<RestaurantDbContext>();
 
             services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();

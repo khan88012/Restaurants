@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Restaurants.Domain.Entities;
 
-namespace Restaurants.Application.Users.Commands;
+namespace Restaurants.Application.Users.Commands.UpdateUserDetails;
 
-public class UpdateUserDetailsCommandHandler(ILogger<UpdateUserDetailsCommandHandler> logger , IUserContext userContext, IUserStore<User> userStore) : IRequestHandler<UpdateUserDetailsCommand , bool>
+public class UpdateUserDetailsCommandHandler(ILogger<UpdateUserDetailsCommandHandler> logger, IUserContext userContext, IUserStore<User> userStore) : IRequestHandler<UpdateUserDetailsCommand, bool>
 {
     public async Task<bool> Handle(UpdateUserDetailsCommand request, CancellationToken cancellationToken)
     {
